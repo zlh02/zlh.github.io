@@ -1,0 +1,133 @@
+﻿.btn-typ1 {
+    background: #fff none repeat scroll 0 0;
+    color: #090909;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 20px 30px;
+    text-transform: capitalize;
+    display: inline-block;
+    transition: all .2s;
+    border: 1px solid #fff;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0;
+}
+
+.btn-typ1:hover {
+    background: #090909;
+    color: #fff;
+}
+
+.btn-typ2 {
+    font-weight: 500;
+    line-height: 1;
+    text-transform: capitalize;
+    display: inline-block;
+    transition: all .2s;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 0px;
+    border: 1px solid #fff;
+    font-size: 20px;
+}
+
+.btn-typ2:hover {
+    background: #090909;
+    color: #fff;
+}
+
+.btn-typ3 {
+    background: #090909 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 20px 32px;
+    text-transform: capitalize;
+    display: inline-block;
+    transition: all .2s;
+    border: 1px solid #090909;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0;
+}
+
+.btn-typ3:hover {
+    background: #fff;
+    color: #090909;
+}
+
+.btn-typ4 {
+    background: #2f3034 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s;
+    border: 2px solid #2f3034;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+}
+
+.btn-typ4:hover {
+    background: #fff;
+    color: #ff5959;
+}
+
+.btn-typ5 {
+	color: #090909;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0;
+    text-transform: uppercase;
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+}
+
+.btn-typ5:hover {
+        color: #ff5959;
+}
+
+.btn-typ6 {
+    font-weight: 500;
+    line-height: 1;
+    text-transform: capitalize;
+    display: inline-block;
+    transition: all .2s;
+    font-family: 'Poppins', sans-serif;
+    color: #090909;
+    padding: 20px 30px;
+    border-radius: 0px;
+    border: 1px solid #090909;
+    font-size: 20px;
+}
+
+.btn-typ6:hover {
+    background: #090909;
+    color: #fff;
+}
+.btn-typ7 {
+    font-weight: 600;
+    line-height: 1;
+    width: 100%;
+    background: #222439;
+    text-transform: uppercase;
+    display: block;
+    transition: all .2s;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 0px;
+    border: 1px solid #090909;
+    font-size: 20px;
+}
+
+.btn-typ7:hover {
+    background: #090909;
+    color: #fff;
+}
