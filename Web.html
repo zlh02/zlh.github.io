@@ -44,113 +44,51 @@
 </header>
 
 <div class="wgt-navbar">
-    <dl class="box">
-        <dd>
-            <form>
-                <select name="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat" selected="selected">Fiat</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </form>
-        </dd>
-    </dl>
-    <dl class="box">
-        <dd>        
-            <form>
-                <select name="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat" selected="selected">Fiat</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </form>
-        </dd>
-	</dl>
-    <dl class="box">
-        <dd>
-            <form>
-                <select name="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat" selected="selected">Fiat</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </form>
-        </dd>
-    </dl>
-    <dl class="box">
-        <dd>
-            <form>
-                <select name="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat" selected="selected">Fiat</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </form>
-        </dd>
-    </dl>
-    <dl class="box">
-    	<dd id="J-knowledge-content">
-            <form>
-                <select name="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat" selected="selected">Fiat</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </form>
-        </dd>
-    </dl>
-    <dl class="box">
-        <dd>
-            <form>
-                <select name="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat" selected="selected">Fiat</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </form>
-        </dd>
-    </dl>
+    <div class="dropdown">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <!--侧边栏-->
-<div class="nav_">
-<nav>
-    <div class="nav_ul_">
+<nav class="nav_">
     <ul class="nav_ul_">
 	    <div class="nav_ul_li_">
-	    <li><a href="#Chapter 1">Top</li>
-	    <li><a href="#Chapter 1">Iframe</a></li>
-        <li><a href="#Chapter 2">Document</a></li>
-        <li><a href="#Chapter 3">Pictures</a></li>
-        <li><a href="#Chapter 4">Application</a></li>
-		<li><a href="#Chapter 5">Bottom</a></li>
+	    <li><a href="#Chapter 1">Top         </a></li>
+	    <li><a href="#Chapter 1">Iframe      </a></li>
+        <li><a href="#Chapter 2">Document    </a></li>
+        <li><a href="#Chapter 3">Pictures    </a></li>
+        <li><a href="#Chapter 4">Application </a></li>
+		<li><a href="#Chapter 5">Bottom      </a></li>
 		</div>
     </ul>
-	</div>
 </nav>
-</div>
 
 <div class="main">
 <!--部分-->
-<p>
+<p margin-left="100px" >
     <h1 class="h_1"><a name="Chapter 1">Iframe.</a></h1>
     <span>
-        Plese upload fies in <a href="https://github.com/Agrry/Agrry.github.io">https://github.com/Agrry/Agrry.github.io</a> 
+        Plese upload fies in <a id="link" href="https://github.com/Agrry/Agrry.github.io/" target="_blank">https://github.com/Agrry/Agrry.github.io/</a> 
     </span>
 </p>
 
 <!--内联窗口-->
-<iframe src="https://agrry.github.io/" width="70%" height="100%" frameborder="0" ></iframe>
-<p><a href="https://agrry.github.io/" target="iframe_a"></a></p>
+<iframe src="https://agrry.github.io/README.md" width="70%" height="100%" frameborder="0" ></iframe>
+<p><a href="https://agrry.github.io/README.md" target="iframe_a"></a></p>
 
 <!--部分-->
-<p id="section_2">
+<p margin-left="100px" >
 	<h1 class="h_1"><a name="Chapter 2">Empty with Document.</a></h1>
 	<h1 class="h_1"><a name="Chapter 3">Empty with Pictures.</a></h1>
 	<h1 class="h_1"><a name="Chapter 4">Empty with Application.</a></h1>
