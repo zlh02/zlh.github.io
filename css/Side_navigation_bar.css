@@ -1,0 +1,36 @@
+nav {
+    line-height:50px;/*行间距*/
+	border-left: 6px solid rgba(255,192,203,0.5);
+    background-color:rgba(255,192,203,0.3);
+    height:550px;
+    width:150px;
+    float:left;
+	text-align:left;	      
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    background-color: rgba(255,192,203,0.1);
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+a {
+    cursor:pointer
+    color: hotpink;
+    text-decoration: none;/*文本去除下划线*/
+}
+
+/* 鼠标悬停时改变链接颜色 */
+li a:hover {
+    background-color: #FFFFE0;
+    color: #FF4500;
+}

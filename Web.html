@@ -2,61 +2,165 @@
 <html>
 
 <head> 
-<style> 
-header {
-    color:white;
-    text-align:center;
-    padding:5px;	 
-}
-nav {
-    line-height:30px;
-    background-color:#eeeeee;
-    height:300px;
-    width:100px;
-    float:left;
-    padding:5px;	      
-}
-section {
-    width:350px;
-    float:left;
-    padding:10px;	 	 
-}
-footer {
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:5px;	 	 
-}
-</style>#鏍峰紡
+
+<title>Agrry_Personal website Editing exercise.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta charset="UTF-8">
+
+<!--样式-->
+<link rel="stylesheet" href="css/mystyle.css">
+<link rel="stylesheet" href="css/Navigation_bar.css">
+<link rel="stylesheet" href="css/Side_navigation_bar.css">
+
 </head>
 
-<body background="/img/eg_background.jpg"> 
+<body> 
 
+<script type="text/javascript">
+    !function(){
+      var winWidth = window.innerWidth || document.documentElement && document.documentElement.clientWidth || 0,
+        pageWidth = 'SMALL';
+
+      // 获取 body 宽度设定。
+          var pageWidthDef = {
+      SMALL: 980,
+      LARGE: 1180
+    };
+
+    if (winWidth >= 1280) {    // @media screen and (min-width: 1280px)
+      pageWidth = 'LARGE';
+    } else {                  // Default width.
+      pageWidth = 'SMALL';
+    }
+	
+    document.body.className += (' w-' + pageWidth.toLowerCase());
+    }();
+</script>
+
+<!--头-->
 <header>
-<h1>User Gallery</h1>
+<h1>Agrry</h1>
 </header>
 
+<div class="wgt-navbar">
+    <dl class="box">
+        <dd>
+            <form>
+                <select name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat" selected="selected">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </form>
+        </dd>
+    </dl>
+    <dl class="box">
+        <dd>        
+            <form>
+                <select name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat" selected="selected">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </form>
+        </dd>
+	</dl>
+    <dl class="box">
+        <dd>
+            <form>
+                <select name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat" selected="selected">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </form>
+        </dd>
+    </dl>
+    <dl class="box">
+        <dd>
+            <form>
+                <select name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat" selected="selected">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </form>
+        </dd>
+    </dl>
+    <dl class="box">
+    	<dd id="J-knowledge-content">
+            <form>
+                <select name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat" selected="selected">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </form>
+        </dd>
+    </dl>
+    <dl class="box">
+        <dd>
+            <form>
+                <select name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat" selected="selected">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </form>
+        </dd>
+    </dl>
+</div>
+
+<!--侧边栏-->
+<div class="nav_">
 <nav>
-Document<br>
-Pictures<br>
-Application<br>
+    <div class="nav_ul_">
+    <ul class="nav_ul_">
+	    <div class="nav_ul_li_">
+	    <li><a href="#Chapter 1">Top</li>
+	    <li><a href="#Chapter 1">Iframe</a></li>
+        <li><a href="#Chapter 2">Document</a></li>
+        <li><a href="#Chapter 3">Pictures</a></li>
+        <li><a href="#Chapter 4">Application</a></li>
+		<li><a href="#Chapter 5">Bottom</a></li>
+		</div>
+    </ul>
+	</div>
 </nav>
+</div>
 
-<section>
-<h1>Empty with douyment.</h1>
+<div class="main">
+<!--部分-->
 <p>
-Plese upload fies in <a href="https://agrry.github.io/">Agrry.github.io</a> 
+    <h1 class="h_1"><a name="Chapter 1">Iframe.</a></h1>
+    <span>
+        Plese upload fies in <a href="https://github.com/Agrry/Agrry.github.io">https://github.com/Agrry/Agrry.github.io</a> 
+    </span>
 </p>
-<p>
 
-</p>
-</section>
-
-<iframe src="https://agrry.github.io/" width="80%" height="30%"></iframe>
-
+<!--内联窗口-->
+<iframe src="https://agrry.github.io/" width="70%" height="100%" frameborder="0" ></iframe>
 <p><a href="https://agrry.github.io/" target="iframe_a"></a></p>
+
+<!--部分-->
+<p id="section_2">
+	<h1 class="h_1"><a name="Chapter 2">Empty with Document.</a></h1>
+	<h1 class="h_1"><a name="Chapter 3">Empty with Pictures.</a></h1>
+	<h1 class="h_1"><a name="Chapter 4">Empty with Application.</a></h1>
+	<h1 class="h_1"><a name="Chapter 5">Bottom.</a></h1>
+</p>
+</div>
+
+<!--结尾-->
 <footer>
-Copyright Agrry.github.io
+    Copyright Agrry.github.io 
 </footer>
 
 </body>
