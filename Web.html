@@ -44,27 +44,45 @@
 </header>
 
 <div class="wgt-navbar">
-    <div class="dropdown">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
+            <li class="dropdown"><a href="#home">Home</a></li>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                <a href="javascript:void(0)" class="dropbtn">Toolbar</a>
                     <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a id="link" href="https://fanyi.qq.com/" target="_blank">Tencent translation</a>
+                        <a id="link" href="https://cowtransfer.com/" target="_blank">Cow quick pass</a>
+                        <a id="link" href="https://mail.qq.com/" target="_blank">QQ Mail</a>
+						<a id="link" href="https://www.aconvert.com/cn/" target="_blank">Document</a>
+                    </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Website</a>
+                    <div class="dropdown-content">
+                        <a id="link" href="https://github.com/Agrry/Agrry.github.io/" target="_blank">Github</a>
+                        <a id="link" href="https://www.w3school.com.cn/css/index.asp" target="_blank">CSS</a>
+                        <a id="link" href="https://www.w3school.com.cn/html/index.asp" target="_blank">Html</a>
+						<a id="link" href="https://vercel.com/" target="_blank">Vercel</a>
+                    </div>
+            </li>
+			<li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Online Judge</a>
+                    <div class="dropdown-content">
+                        <a id="link" href="http://10.10.22.16/login" target="_blank">Hai liang</a>
+                        <a id="link" href="https://oj.wenjian.club/" target="_blank">Wenjian</a>
+                        <a id="link" href="https://vjudge.net/contest" target="_blank">Vjudge</a>
+						<a id="link" href="https://oj.wenjian.club/" target="_blank">Wenjian</a>
+                        <a id="link" href="https://codeforces.com/" target="_blank">CodeForces</a>
+						<a id="link" href="https://www.luogu.com.cn/auth/login" target="_blank">Luogu</a>
                     </div>
             </li>
         </ul>
-    </div>
 </div>
 
 <!--侧边栏-->
 <nav class="nav_">
     <ul class="nav_ul_">
 	    <div class="nav_ul_li_">
-	    <li><a href="#Chapter 1">Top         </a></li>
+	    <li><a href="#">Top         </a></li>
 	    <li><a href="#Chapter 1">Iframe      </a></li>
         <li><a href="#Chapter 2">Document    </a></li>
         <li><a href="#Chapter 3">Pictures    </a></li>
@@ -76,23 +94,25 @@
 
 <div class="main">
 <!--部分-->
-<p margin-left="100px" >
+
+<p>
     <h1 class="h_1"><a name="Chapter 1">Iframe.</a></h1>
     <span>
         Plese upload fies in <a id="link" href="https://github.com/Agrry/Agrry.github.io/" target="_blank">https://github.com/Agrry/Agrry.github.io/</a> 
     </span>
-</p>
-
 <!--内联窗口-->
-<iframe src="https://agrry.github.io/README.md" width="70%" height="100%" frameborder="0" ></iframe>
-<p><a href="https://agrry.github.io/README.md" target="iframe_a"></a></p>
 
-<!--部分-->
-<p margin-left="100px" >
+<iframe src="https://agrry.github.io" width="70%" height="100%" frameborder="0" ></iframe>
+<a href="https://agrry.github.io/README.md" target="iframe_a"></a>
+    <hr /> 
 	<h1 class="h_1"><a name="Chapter 2">Empty with Document.</a></h1>
+	<hr /> 
 	<h1 class="h_1"><a name="Chapter 3">Empty with Pictures.</a></h1>
+	<hr /> 
 	<h1 class="h_1"><a name="Chapter 4">Empty with Application.</a></h1>
+	<hr /> 
 	<h1 class="h_1"><a name="Chapter 5">Bottom.</a></h1>
+	<br /> 
 </p>
 </div>
 

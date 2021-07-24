@@ -1,30 +1,33 @@
 nav {
     line-height:60px;/*行间距*/
-	border-left: 6px solid rgba(255,192,203,0.5);
+	border-left: 6px solid rgba(255,192,203,0.8);
     background-color:rgba(255,192,203,0.3);
     height:600px;
     width:120px;
     float:left;
 	text-align:left;	
-    margin-right: 30px;	
+    margin-right: 50px;	
 }
 
-.nav_ul_ ul {
+.nav_ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 150px;
+    overflow: hidden;
+    background-color: rgba(255,192,203,0.5);
 }
 
-.nav_ul_ li a {
-	background-color:rgba(255,192,203,0.5);
-	color: white;
+.nav_ li {
+}
+
+.nav_ li a {
+	color: rgb(255,69,0);
     display: block;
     padding: 8px 16px;
     text-decoration: none;
 }
 
-.nav_ul_ a {
+.nav_ a {
 	text-align: left;
     width:120px;
     cursor:pointer;
@@ -33,7 +36,7 @@ nav {
 }
 
 /* 鼠标悬停时改变链接颜色 */
-.nav_ul_ li a:hover {
+.nav_ li a:hover {
     background-color: #FFFFE0;
     color: #FF4500;
 }
