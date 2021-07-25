@@ -1,0 +1,408 @@
+﻿/* Latop Device :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {}
+
+
+/* LG  Device :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .papri-main-3-slider-area-content h2 {
+        font-size: 70px;
+    }
+
+    .papri-about-typ1-area .section-title-style-3.lite {
+        margin-bottom: 50px;
+    }
+	.papri-single-portfolio-page-img-cont {
+    padding-right: 0;
+	}
+}
+
+/* MD Device :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-menu-area {
+        display: inherit;
+    }
+
+    .header-logo {
+        margin: 20px 0px;
+    }
+
+    ul.header-search-btn {
+        margin: 12px 0;
+        padding: 0 80px 0 0;
+    }
+
+    .mobile-menu.mean-container {
+        margin-top: -18px;
+        position: absolute;
+        right: 0;
+        left: 0;
+    }
+
+    .papri-main-1-slider-area-content h2 {
+        font-size: 48px;
+    }
+
+    .papri-services-style-2-wraper .col-xl-4:nth-child(odd) .single-services-typ-2,
+    .papri-services-style-1-wraper .col-xl-4:nth-child(odd) .single-services-style-1 {
+        margin-top: 0;
+    }
+
+    ul.folio-menu-1 {
+        float: none;
+        margin: 0 0 40px;
+    }
+
+    .papri-testi-typ-1-single-wrape {
+        margin: 0;
+    }
+
+    .papri-testi-typ-1-all-wrape .owl-nav div {
+        display: none !important;
+    }
+
+    .papri-subscribe-typ3-wraper {
+        margin-top: 20px;
+    }
+
+    .papri-contact-form-area {
+        padding: 50px 20px;
+        margin-bottom: 60px;
+    }
+	.papri-single-portfolio-page-img-cont {
+    padding-right: 0;
+	}
+}
+
+
+/* small mobile (XS) :320px. */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .main-menu-area {
+        display: inherit;
+    }
+
+    .header-logo {
+        margin: 20px 0px;
+    }
+
+    ul.header-search-btn {
+        margin: 12px 0;
+        padding: 0 80px 0 0;
+    }
+
+    .mobile-menu.mean-container {
+        margin-top: -18px;
+        position: absolute;
+        right: 0;
+        left: 0;
+    }
+
+    .papri-main-3-slider-area-content h2 {
+        font-size: 60px;
+    }
+
+    .papri-main-1-slider-area-content h2 {
+        font-size: 36px;
+    }
+
+    .papri-main-1-single-slider p {
+        font-size: 18px;
+    }
+
+    .papri-main-1-slider .owl-nav div {
+        display: none !important;
+    }
+
+    .papri-services-style-2-wraper .col-xl-4:nth-child(odd) .single-services-typ-2,
+    .papri-services-style-1-wraper .col-xl-4:nth-child(odd) .single-services-style-1 {
+        margin-top: 0;
+    }
+
+    ul.folio-menu-1 {
+        float: none;
+        margin: 0 0 40px;
+    }
+
+    .papri-testi-typ-1-single-wrape {
+        margin: 0;
+    }
+
+    .papri-testi-typ-1-all-wrape .owl-nav div {
+        display: none !important;
+    }
+
+    .custom-html-widget .footer-logo {
+        margin: 0 0 40px;
+    }
+
+    .single-about-counter:first-child {
+        margin-right: 10px;
+    }
+
+    .single-about-counter {
+        padding: 30px 30px;
+    }
+
+    .papri-contact-form-area {
+        padding: 50px 20px;
+        margin-bottom: 60px;
+    }
+	.papri-single-portfolio-page-img-cont {
+    padding-right: 0;
+	}
+
+}
+
+
+/* SM Device :480px. */
+@media (min-width: 361px) and (max-width: 575px) {
+    .papri-header-area .col-xl-2.col-lg-2.col-md-2.col-sm-3 {
+        width: 40%;
+    }
+
+    .main-menu-area {
+        display: inherit;
+    }
+
+    .header-logo {
+        margin: 20px 0px;
+    }
+
+    ul.header-search-btn {
+        margin: 15px 0 0;
+        padding: 0 80px 0 0;
+    }
+
+    .papri-header-area .col-xl-2.col-lg-2.col-md-2.col-sm-3 {
+        width: 50%;
+    }
+
+    .papri-header-area .col-xl-10.col-lg-10.col-md-10.col-sm-9 {
+        width: 50%;
+    }
+
+    .mobile-menu.mean-container {
+        margin-top: 0px;
+        position: absolute;
+        right: 15px;
+        left: 15px;
+        top: -17px;
+    }
+
+    .papri-main-3-slider-area-content h2 {
+        font-size: 60px;
+    }
+
+    .papri-main-2-slider-area-content h2,
+    .papri-main-1-slider-area-content h2 {
+        font-size: 36px;
+    }
+
+    .papri-main-1-slider-area-content h2 span {
+        margin: 15px 0 0;
+    }
+
+    .papri-2-main-slider-btn-wrape .btn,
+    .papri-1-main-slider-btn-wrape .btn {
+        margin: 0px 15px 10px;
+    }
+
+    .papri-main-2-single-slider p,
+    .papri-main-1-single-slider p {
+        font-size: 18px;
+    }
+
+    .papri-main-1-slider .owl-nav div {
+        display: none !important;
+    }
+
+    .papri-services-style-2-wraper .col-xl-4:nth-child(odd) .single-services-typ-2,
+    .papri-services-style-1-wraper .col-xl-4:nth-child(odd) .single-services-style-1 {
+        margin-top: 0;
+    }
+
+    .subscribe-form-wraper2 h3 {
+        font-size: 36px;
+    }
+
+    ul.folio-menu-1 {
+        float: none;
+        margin: 0 0 40px;
+    }
+
+    .papri-testi-typ-1-single-wrape {
+        margin: 0;
+    }
+
+    .papri-testi-typ-1-all-wrape .owl-nav div {
+        display: none !important;
+    }
+
+    .custom-html-widget .footer-logo {
+        margin: 0 0 40px;
+    }
+
+    .search-form-centered {
+        width: 90%;
+        text-align: center;
+    }
+
+    .search-form button {
+        position: inherit;
+        margin: 30px 0 0;
+    }
+
+    .papri-about-typ1-area .section-title-style-3 {
+        margin-bottom: 40px;
+    }
+
+    .single-about-counter:first-child {
+        margin-right: 0;
+    }
+    .papri-error-content-wraper h2 {
+        font-size: 70px;
+        line-height: 200px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .papri-contact-form-area {
+        padding: 50px 20px;
+        margin-bottom: 60px;
+    }
+	.papri-single-portfolio-page-img-cont {
+    padding-right: 0;
+	}
+
+}
+
+/* SM Device :480px. */
+@media (max-width: 360px) {
+
+    .papri-header-area .col-xl-2.col-lg-2.col-md-2.col-sm-3 {
+        width: 40%;
+    }
+
+    .main-menu-area {
+        display: inherit;
+    }
+
+    .header-logo {
+        margin: 20px 0px;
+    }
+
+    ul.header-search-btn {
+        margin: 15px 0 0;
+        padding: 0 80px 0 0;
+    }
+
+    .papri-header-area .col-xl-2.col-lg-2.col-md-2.col-sm-3 {
+        width: 50%;
+    }
+
+    .papri-header-area .col-xl-10.col-lg-10.col-md-10.col-sm-9 {
+        width: 50%;
+    }
+
+    .mobile-menu.mean-container {
+        margin-top: 0px;
+        position: absolute;
+        right: 15px;
+        left: 15px;
+        top: -17px;
+    }
+
+    .papri-main-1-slider-area-content h2 {
+        font-size: 36px;
+    }
+
+    .papri-main-3-slider-area-content h2 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .papri-main-2-slider-area-content h2 {
+        font-size: 40px;
+    }
+
+    .papri-main-1-slider-area-content h2 span {
+        margin: 15px 0 0;
+    }
+
+    .papri-3-main-slider-btn-wrape .btn:first-child,
+    .papri-2-main-slider-btn-wrape .btn:first-child,
+    .papri-1-main-slider-btn-wrape .btn:first-child {
+        margin: 0px 0 20px;
+    }
+
+    .papri-main-2-single-slider p,
+    .papri-main-1-single-slider p {
+        font-size: 18px;
+    }
+
+    .papri-main-1-slider .owl-nav div {
+        display: none !important;
+    }
+
+    .subscribe-form-wraper2 h3 {
+        font-size: 36px;
+    }
+
+    .papri-services-style-2-wraper .col-xl-4:nth-child(odd) .single-services-typ-2,
+    .papri-services-style-1-wraper .col-xl-4:nth-child(odd) .single-services-style-1 {
+        margin-top: 0;
+    }
+
+    ul.folio-menu-1 {
+        float: none;
+        margin: 0 0 40px;
+    }
+
+    .papri-testi-typ-1-single-wrape {
+        margin: 0;
+    }
+
+    .papri-testi-typ-1-all-wrape .owl-nav div {
+        display: none !important;
+    }
+
+    .custom-html-widget .footer-logo {
+        margin: 0 0 40px;
+    }
+
+    .search-form-centered {
+        width: 90%;
+        text-align: center;
+    }
+
+    .search-form button {
+        position: inherit;
+        margin: 30px 0 0;
+    }
+
+    .papri-about-typ1-area .section-title-style-3 {
+        margin-bottom: 40px;
+    }
+
+    .single-about-counter:first-child {
+        margin-right: 0;
+    }
+
+    .single-about-counter {
+        margin-right: 0;
+        width: 100%;
+    }
+    .papri-error-content-wraper h2 {
+        font-size: 70px;
+        line-height: 200px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .papri-contact-form-area {
+        padding: 50px 20px;
+        margin-bottom: 60px;
+    }
+	.papri-single-portfolio-page-img-cont {
+    padding-right: 0;
+	}
+}

@@ -1,0 +1,45 @@
+nav {
+    line-height:60px;/*行间距*/
+	border-left: 6px solid rgba(255,192,203,0.8);
+    background-color:rgba(255,192,203,0.3);
+    height:700px;
+    width:120px;
+    float:left;
+	text-align:left;	
+    margin-right: 20px;	
+	position: -webkit-sticky;
+	top: 0;
+    position: sticky;
+}
+
+.nav_ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(255,192,203,0.5);
+}
+
+.nav_ li {
+}
+
+.nav_ li a {
+	color: white;
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.nav_ a {
+	text-align: left;
+    width:120px;
+    cursor:pointer;
+    color: hotpink;
+    text-decoration: none;/*文本去除下划线*/
+}
+
+/* 鼠标悬停时改变链接颜色 */
+.nav_ li a:hover {
+    background-color: #FFFFE0;
+    color: #FF4500;
+}

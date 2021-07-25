@@ -1,0 +1,29 @@
+body {
+    background-attachment: fixed;
+    background-image: url("https://agrry.github.io/img/0.jpg");
+    background-origin: content;
+    background-position: center top;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    border-bottom: 1px solid rgba(255,192,203,0.5);
+	text-shadow: 2px 2px 5px rgb(255,192,253);
+    color:black;
+    text-align:center;
+    padding:5px;	 
+}
+
+.main {
+    text-indent: 20px;/*文本首行缩进*/
+    width:70%;
+    float:left;
+}
+
+footer {
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
