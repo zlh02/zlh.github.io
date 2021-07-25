@@ -44,7 +44,10 @@
   text-align: left;
 }
 
-.wgt-navbar .dropdown-content a:hover {background-color: #f1f1f1;}
+.wgt-navbar .dropdown-content a:hover {
+	background-color: #FFFFE0;
+    color: #FF4500;
+}
 
 .wgt-navbar .dropdown:hover .dropdown-content {
   display: block;

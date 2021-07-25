@@ -2,11 +2,14 @@ nav {
     line-height:60px;/*行间距*/
 	border-left: 6px solid rgba(255,192,203,0.8);
     background-color:rgba(255,192,203,0.3);
-    height:600px;
+    height:700px;
     width:120px;
     float:left;
 	text-align:left;	
-    margin-right: 50px;	
+    margin-right: 20px;	
+	position: -webkit-sticky;
+	top: 0;
+    position: sticky;
 }
 
 .nav_ ul {
@@ -21,7 +24,7 @@ nav {
 }
 
 .nav_ li a {
-	color: rgb(255,69,0);
+	color: white;
     display: block;
     padding: 8px 16px;
     text-decoration: none;

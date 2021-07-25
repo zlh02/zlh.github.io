@@ -15,12 +15,10 @@ header {
     padding:5px;	 
 }
 
-section {
-    overflow: auto;
-    text-indent: 50px;/*文本首行缩进*/
-    width:350px;
+.main {
+    text-indent: 20px;/*文本首行缩进*/
+    width:70%;
     float:left;
-    padding:10px;
 }
 
 footer {
