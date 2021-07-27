@@ -19,6 +19,15 @@ header {
     text-indent: 20px;/*文本首行缩进*/
     width:70%;
     float:left;
+	text-decoration: none;
+}
+
+span a{
+	text-decoration: none;
+}
+
+span a:hover{
+	color: #FF4500;
 }
 
 footer {
