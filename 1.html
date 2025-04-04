@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洛杉矶城市数据平台</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background-color: #6a67cd;
+            color: white;
+            padding: 12px 24px;
+            box-shadow: 0 2px 5px rgba(255, 140, 140, 0.2);
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-content {
+            flex: 1;
+            position: relative;
+        }
+
+        .header-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .header-description {
+            margin: 4px 0 0 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .map-container {
+            flex: 1; 
+            position: relative;
+        }
+
+        #main-map {
+            height: 100%;
+            width: 100%;
+        }
+
+        .basemap-gallery-container {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255,255,255,0.9);
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .basemap-btn-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .basemap-btn {
+            padding: 6px 12px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9em;
+        }
+
+        .basemap-btn:hover {
+            border-color: #c174e8;
+            background: #f8f5ff;
+        }
+
+        .basemap-btn.active {
+            background: #c174e8;
+            color: white;
+            border-color: #c174e8;
+        }
+
+        arcgis-legend {
+            bottom: 60px !important; 
+        }
+    </style>
+    <script type="module" src="https://js.arcgis.com/calcite-components/3.0.3/calcite.esm.js"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.32/"></script>
+    <script type="module" src="https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="header-title">洛杉矶城市数据平台</h1>
+            <p class="header-description">展示洛杉矶城市基础设施、交通网络和地理空间数据。————by Agrry</p>
+        </div>
+        <calcite-button appearance="transparent" icon-start="information">关于项目</calcite-button>
+    </header>
+    <script>
+        require([
+            "esri/Map",
+            "esri/views/MapView",
+            "esri/layers/FeatureLayer",
+            "esri/Basemap",
+            "esri/layers/TileLayer",
+            "esri/widgets/Legend",
+            "esri/core/reactiveUtils"
+        ], (Map, MapView, FeatureLayer, Basemap, TileLayer, Legend, reactiveUtils) => {
+            const arcgisMap = document.getElementById("main-map");
+            
+            // 底图切换逻辑
+            document.querySelectorAll('.basemap-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // 移除所有激活状态
+                    document.querySelectorAll('.basemap-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 底图配置
+                    const basemapId = this.dataset.basemap;
+                    const configs = {
+                        streets: {
+                            url: "https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
+                            title: "街道地图"
+                        },
+                        topo: {
+                            url: "https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer",
+                            title: "地形图"
+                        },
+                        imagery: {
+                            url: "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+                            title: "卫星影像"
+                        },
+                        gray: {
+                            url: "https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer",
+                            title: "浅灰底图"
+                        }
+                    };
+    
+                    const newBasemap = new Basemap({
+                        baseLayers: [new TileLayer(configs[basemapId])],
+                        title: configs[basemapId].title,
+                        id: basemapId
+                    });
+    
+                    arcgisMap.map.basemap = newBasemap;
+                });
+            });
+    
+            arcgisMap.addEventListener("arcgisViewReadyChange", async (event) => {
+                const view = event.detail.view;
+                view.container = document.getElementById("viewDiv");
+                
+                // 初始化视图
+                await reactiveUtils.whenOnce(() => view.ready);
+                view.goTo({
+                    center: [113.5107, 22.2153],
+                    zoom: 8
+                });
+    
+                // 添加业务图层
+                const cityLayer = new FeatureLayer({
+                    url: "https://www.geosceneonline.cn/server/rest/services/Hosted/粤港澳大湾区城市数据/FeatureServer/0",
+                    popupTemplate: {
+                        title: "{城市名称}",
+                        content: [{
+                            type: "fields",
+                            fieldInfos: [
+                                { fieldName: "人口", label: "常住人口（万）", format: { digitSeparator: true } },
+                                { fieldName: "GDP", label: "GDP总量（亿元）" },
+                                { fieldName: "面积", label: "辖区面积（km²）" }
+                            ]
+                        }]
+                    }
+                });
+    
+                // 初始化图例
+                const legend = new Legend({
+                    view: view,
+                    layerInfos: [{
+                        layer: cityLayer,
+                        title: "城市数据图例"
+                    }]
+                });
+    
+                // 初始化底图按钮状态
+                document.querySelector(`.basemap-btn[data-basemap="${view.map.basemap.id}"]`)?.classList.add('active');
+            });
+        });
+    </script>
+    <div class="map-container">
+        <arcgis-map id="main-map" item-id="237b9584339446a0b56317b5962a4971">
+            <arcgis-search position="top-right"></arcgis-search>
+            <arcgis-zoom position="top-left"></arcgis-zoom>
+            <arcgis-scale-bar position="bottom-right"></arcgis-scale-bar>
+            <arcgis-legend position="bottom-left"></arcgis-legend>
+            <arcgis-layer-list position="top-right"></arcgis-layer-list>
+        </arcgis-map>
+
+        <!-- 修改后的底图切换按钮 -->
+        <div class="basemap-gallery-container">
+            <div class="basemap-btn-group">
+                <button class="basemap-btn" data-basemap="streets">街道地图</button>
+                <button class="basemap-btn" data-basemap="topo">地形图</button>
+                <button class="basemap-btn" data-basemap="imagery">卫星影像</button>
+                <button class="basemap-btn" data-basemap="gray">浅灰底图</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
