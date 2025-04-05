@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>福州全部公园点位</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css" />
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    #header {
+      height: 50px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    #mapDiv {
+      height: calc(100% - 175px);
+    }
+
+    #basemapGalleryDiv {
+      height: 125px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+  <script src="https://js.arcgis.com/4.32/"></script>
+  <script>
+    require([
+      "esri/Map",
+      "esri/views/MapView",
+      "esri/layers/FeatureLayer",
+      "esri/widgets/ScaleBar",
+      "esri/widgets/Legend",
+      "esri/widgets/Search",
+      "esri/widgets/LayerList",
+      "esri/widgets/BasemapGallery"
+    ], function (
+      Map,
+      MapView,
+      FeatureLayer,
+      ScaleBar,
+      Legend,
+      Search,
+      LayerList,
+      BasemapGallery
+    ) {
+      // 创建地图
+      const map = new Map({
+        basemap: "topo-vector"
+      });
+
+      // 添加一个已发布的专题图层
+      const featureLayer = new FeatureLayer({
+        url: "https://www.geosceneonline.cn/server/rest/services/Hosted/福州全部公园点位/FeatureServer"
+      });
+      map.add(featureLayer);
+
+      // 创建地图视图
+      const view = new MapView({
+        container: "mapDiv",
+        map: map,
+        center: [119.306239, 26.075302],
+        zoom: 10
+      });
+
+      // 添加比例尺微件
+      const scaleBar = new ScaleBar({
+        view: view,
+        unit: "dual"
+      });
+      view.ui.add(scaleBar, {
+        position: "bottom-left"
+      });
+
+      // 添加图例微件
+      const legend = new Legend({
+        view: view
+      });
+      view.ui.add(legend, "bottom-right");
+
+      // 添加搜索框微件
+      const search = new Search({
+        view: view
+      });
+      view.ui.add(search, "top-right");
+
+      // 添加图层列表微件
+      const layerList = new LayerList({
+        view: view
+      });
+      view.ui.add(layerList, "top-left");
+
+      // 添加底图库微件
+      const basemapGallery = new BasemapGallery({
+        view: view,
+        container: "basemapGalleryDiv"
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="header">福州全部公园点位</div>
+  <div id="mapDiv"></div>
+  <div id="basemapGalleryDiv"></div>
+</body>
+
+</html>
